@@ -1,1 +1,35 @@
 <div class="bg-slate-100 p-12">All about Reactive form's</div>
+
+<div class="example-container">
+  <div class="form-container">
+    <form [formGroup]="loginForm" (submit)="submit()" class="flex flex-col p-10">
+      <mat-form-field>
+        <mat-label>Input</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Textarea</mat-label>
+        <textarea matInput formControlName="info" required></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid && loginForm.touched">Log
+        In
+      </button>
+    </form>
+  </div>
+</div>
+
+<div>
+  <form [formGroup]="addressForm" class="flex flex-col p-10">
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+  </form>
+</div>
