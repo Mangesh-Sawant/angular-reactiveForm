@@ -1,0 +1,5 @@
+<form (ngSubmit)="onSubmit()" class="flex flex-col bg-red-100 p-10">
+  <label>Type your name</label>
+  <input [formControl]="singleFieldControl" type="text" class="p-3 rounded-xl">
+  <button mat-button type="submit" mat-raised-button class="mt-5">For only one field</button>
+</form>

@@ -1,0 +1,13 @@
+<form [formGroup]="formOne" class="flex flex-col">
+  <label for="firstName">First Name:</label>
+  <input id="firstName" formControlName="firstName"/>
+  @if (formOne.get('firstName')?.invalid && formOne.get('firstName')?.touched) {
+    First Name is required.
+  }
+
+  <label for="lastName">Last Name:</label>
+  <input id="lastName" formControlName="lastName"/>
+  @if (formOne.get('lastName')?.invalid && formOne.get('lastName')?.touched) {
+    Last Name is required.
+  }
+</form>
