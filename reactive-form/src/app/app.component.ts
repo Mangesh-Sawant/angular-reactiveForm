@@ -37,8 +37,8 @@ export class AppComponent implements OnInit {
       info: ['', [Validators.required]],
       address: this.addressForm = this.formBuilder.group({
         address: ['', [Validators.required]]
-      })
-    });
+      }) as FormGroup
+    }) as FormGroup;
   }
 
   private onChangeFormValue(): void {
